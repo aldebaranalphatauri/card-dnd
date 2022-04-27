@@ -1,5 +1,5 @@
 {
-  "homepage": "https://aldebaranalphatauri.github.io",
+  "homepage": "https://aldebaranalphatauri.github.io/card-dnd",
   "name": "card-dnd",
   "version": "1.0.0",
   "description": "Implement multiple selection using react-dnd and hooks.",

@@ -46,7 +46,7 @@ const seeds = ['C', 'D', 'H', 'S']
 const init_cards = [...Array(TOTAL_ITEMS).keys()].map( (i) =>  ( {
     id: i + 1,
     order: i,
-    url: "/resources/" 
+    url: "/card-dnd/resources/" 
       + values[getRandomInt(0, values.length)] 
       + seeds[getRandomInt(0, seeds.length)] 
       + ".svg"

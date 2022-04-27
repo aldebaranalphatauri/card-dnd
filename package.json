@@ -1,6 +1,5 @@
 {
-  "homepage": "http://znwang25.github.io/react-dnd-multiple-selection",
-  "name": "react-dnd-multiple-selection",
+  "name": "card-dnd",
   "version": "1.0.0",
   "description": "Implement multiple selection using react-dnd and hooks.",
   "keywords": [

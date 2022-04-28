@@ -9,8 +9,8 @@ export default function Card(props) {
   const ref = useRef(null);
 
   const [{ isDragging }, drag, preview] = useDrag({
-    item: { type: ItemTypes.CARD },
-    begin: (monitor) => {
+    type: ItemTypes.CARD,
+    item: (monitor) => {
       const { id, order, url } = props;
       const draggedCard = { id, order, url };
       let cards;

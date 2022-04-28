@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/card-dnd/static/css/main.00d54f48.chunk.css",
-    "main.js": "/card-dnd/static/js/main.a056cfa0.chunk.js",
-    "main.js.map": "/card-dnd/static/js/main.a056cfa0.chunk.js.map",
+    "main.js": "/card-dnd/static/js/main.0f6af883.chunk.js",
+    "main.js.map": "/card-dnd/static/js/main.0f6af883.chunk.js.map",
     "runtime-main.js": "/card-dnd/static/js/runtime-main.13e801a7.js",
     "runtime-main.js.map": "/card-dnd/static/js/runtime-main.13e801a7.js.map",
-    "static/js/2.638527dd.chunk.js": "/card-dnd/static/js/2.638527dd.chunk.js",
-    "static/js/2.638527dd.chunk.js.map": "/card-dnd/static/js/2.638527dd.chunk.js.map",
+    "static/js/2.6d3c983e.chunk.js": "/card-dnd/static/js/2.6d3c983e.chunk.js",
+    "static/js/2.6d3c983e.chunk.js.map": "/card-dnd/static/js/2.6d3c983e.chunk.js.map",
     "index.html": "/card-dnd/index.html",
-    "precache-manifest.5c1fcc4998312ca14a04f79273bcdbc0.js": "/card-dnd/precache-manifest.5c1fcc4998312ca14a04f79273bcdbc0.js",
+    "precache-manifest.af8784f6dc3f5c56541e6b4ddbecb6c9.js": "/card-dnd/precache-manifest.af8784f6dc3f5c56541e6b4ddbecb6c9.js",
     "service-worker.js": "/card-dnd/service-worker.js",
     "static/css/main.00d54f48.chunk.css.map": "/card-dnd/static/css/main.00d54f48.chunk.css.map",
-    "static/js/2.638527dd.chunk.js.LICENSE.txt": "/card-dnd/static/js/2.638527dd.chunk.js.LICENSE.txt"
+    "static/js/2.6d3c983e.chunk.js.LICENSE.txt": "/card-dnd/static/js/2.6d3c983e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.13e801a7.js",
-    "static/js/2.638527dd.chunk.js",
+    "static/js/2.6d3c983e.chunk.js",
     "static/css/main.00d54f48.chunk.css",
-    "static/js/main.a056cfa0.chunk.js"
+    "static/js/main.0f6af883.chunk.js"
   ]
 }

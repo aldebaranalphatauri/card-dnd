@@ -1,39 +1,60 @@
-import React from "react"
-import { DndProvider } from 'react-dnd'
-import { HTML5Backend } from 'react-dnd-html5-backend'
-import { TouchBackend } from 'react-dnd-touch-backend'
-import Container from "./Container.js"
-import "./styles.css"
+import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { indigo, green, blue, lightGreen } from '@mui/material/colors'
+import { Container, CssBaseline } from '@mui/material'
+import { CurrentCards } from './components/CurrentCards'
 
-export default function App() {
-  const aBackend = isTouchDevice() ? TouchBackend : HTML5Backend
+const theme = createTheme({
+  palette: {
+    secondary: {
+      main: blue[900]
+    },
+    primary: {
+      main: indigo[700]
+    },
+    background: {
+      bore: green[900],
+      default: green[800],
+      active: lightGreen[200],
+      toolbar: lightGreen[50],
+    },
+  },
+})
 
+const TOTAL_ITEMS = 25
+
+const getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+  //The maximum is exclusive and the minimum is inclusive
+}
+
+const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'X']
+const seeds = ['C', 'D', 'H', 'S']
+
+// url: "https://picsum.photos/60/84?random&" + i
+const cards = [...Array(TOTAL_ITEMS).keys()].map((i) => ({
+  id: i + 1,
+  url: "/card-dnd/resources/"
+    + values[getRandomInt(0, values.length)]
+    + seeds[getRandomInt(0, seeds.length)]
+    + ".svg",
+  chosen: false,
+  filtered: false,
+  selected: false,
+}))
+
+function App() {
   return (
-    <div className="App">
-        <h2>Drag and drop multiple items with React DnD</h2>
-        <h4>Use Shift or Cmd key to multi-select</h4>
-      <DndProvider backend={aBackend}>
-        <Container />
-      </DndProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container maxWidth={false} disableGutters={true}>
+        <CurrentCards cards={cards} />} />
+      </Container>
+    </ThemeProvider>
   )
 }
 
-function isTouchDevice() {
-  try {
-    let prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
-
-    let mq = function (query) {
-      return window.matchMedia(query).matches;
-    };
-
-    if (('ontouchstart' in window) || (typeof window.DocumentTouch !== "undefined" && document instanceof window.DocumentTouch)) {
-      return true;
-    }
-
-    return mq(['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join(''));
-  } catch (e) {
-    console.error('(Touch detect failed)', e);
-    return false;
-  }
-}
+export default App;

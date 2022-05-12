@@ -2,32 +2,26 @@
   "homepage": "https://aldebaranalphatauri.github.io/card-dnd",
   "name": "card-dnd",
   "version": "1.0.0",
-  "description": "Implement multiple selection using react-dnd and hooks.",
-  "keywords": [
-    "react",
-    "multiple selection",
-    "react hook",
-    "react-dnd"
-  ],
+  "description": "Implement sortablejs DnD",
   "main": "src/index.js",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^17.0.0",
-    "react-dnd": "^15.1.1",
-    "react-dnd-html5-backend": "^16.0.1",
-    "react-dnd-touch-backend": "^16.0.1",
-    "react-dom": "^17.0.0",
-    "react-scripts": "^3.4.3"
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.7.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-sortablejs": "^6.1.1",
+    "sortablejs": "^1.15.0",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "typescript": "^3.8.3"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "gh-pages": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,10 +31,22 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
